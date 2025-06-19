@@ -1,1 +1,787 @@
+/* Global Styles - Colors from PDF and general appearance */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Or any preferred font */
+    background-color: #202120; /* Overall content background between header and footer */
+    color: #fefefe; /* Default text color */
+    line-height: 1.6;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #191819; /* Header background color */
+    color: #fefefe;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header .logo img {
+    height: 40px; /* Adjust logo size */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #a6a6a6;
+}
+
+.user-actions a {
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.user-actions a:hover {
+    background-color: #a6a6a6;
+    color: #191819;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #191819; /* Footer background color */
+    color: #a6a6a6;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Home Page Specific Styles */
+.home-content {
+    background-color: #202120;
+    min-height: calc(100vh - 100px); /* Account for header/footer height */
+    padding-top: 80px; /* To prevent content from being hidden by fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure background image doesn't overflow */
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px); /* Adjust hero section height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure hero content is above bg image */
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales the image to cover the entire area */
+    object-position: 50% 50%; /* Centers the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* filter: brightness(0.6); - Removed as per your request for less darkness,
+       relying on the image's natural brightness from the URL */
+    z-index: -1;
+    max-width: 100%; /* Ensure responsiveness */
+    vertical-align: middle; /* Helps with layout */
+}
+
+.welcome-box {
+    background-color: rgba(88, 88, 87, 0.4); /* #585857 at 40% opacity (0.4) */
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 700px; /* Slightly wider box */
+    color: #fefefe;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Optional: add a slight blur effect */
+}
+
+.welcome-box h1 {
+    font-size: 3em; /* Larger heading */
+    margin-bottom: 25px;
+    color: #fefefe;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-box p {
+    font-size: 1.2em; /* Larger paragraph */
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #a6a6a6;
+}
+
+.tools-button {
+    background-color: #007bff; /* Example button color, adjust if you have a brand color */
+    color: white;
+    padding: 18px 40px; /* Larger button */
+    border: none;
+    border-radius: 8px; /* Slightly more rounded */
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* NEW/UPDATED STYLES FOR BUTTON */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: auto;
+    flex-grow: 0;
+    height: auto;
+    overflow: hidden;
+    transition: all .2s ease;
+    width: auto;
+}
+
+.tools-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+
+/* Tools Page Specific Styles */
+.tools-content {
+    background-color: #202120;
+    min-height: calc(100vh - 100px);
+    padding: 100px 20px 40px;
+    color: #fefefe;
+}
+
+.tools-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tools-content h2 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: #fefefe;
+    text-align: left; /* As seen in image_87c1e0.png*/
+}
+
+.tool-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.tool-box {
+    background-color: #191819;
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1;
+    min-width: 320px; /* Adjusted min-width */
+    max-width: 480px; /* Adjusted max-width */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-box:hover:not(.coming-soon) {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.tool-box img {
+    width: 150px; /* Larger tool icon */
+    height: 150px;
+    margin-bottom: 25px;
+    object-fit: contain;
+}
+
+.tool-box h3 {
+    font-size: 2em; /* Larger heading */
+    margin-bottom: 10px;
+    color: #fefefe;
+}
+
+.tool-box p {
+    color: #a6a6a6;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.tool-description {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    color: #fefefe;
+    font-size: 0.95em;
+}
+
+.tool-description p {
+    margin-bottom: 15px;
+}
+
+.generate-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px; /* Larger button */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.generate-button:hover {
+    background-color: #0056b3;
+}
+
+.tool-box.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(100%);
+    position: relative; /* For "Coming Soon" overlay */
+}
+
+.tool-box.coming-soon::after {
+    content: "Coming Soon";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+/* Generat Page Specific Styles */
+.generate-content {
+    background-color: #202120;
+    min-height: calc(100vh - 100px);
+    padding: 100px 20px 40px;
+    color: #fefefe;
+}
+
+.generate-content .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.generate-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fefefe;
+}
+
+.generation-form {
+    background-color: #191819;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.input-group, .option-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.input-group label, .option-group label {
+    font-size: 1.1em;
+    color: #fefefe;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: calc(100% - 50px);
+    padding: 12px;
+    border: 1px solid #595959;
+    background-color: #252525;
+    color: #fefefe;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.input-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-group input {
+    flex-grow: 1;
+}
+
+.add-input-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+    flex-shrink: 0; /* Prevent button from shrinking */
+    transition: background-color 0.3s ease;
+}
+
+.add-input-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 5px; /* Adjust vertical alignment */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #595959;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #007bff;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Slider styling for length range */
+.range-slider-container {
+    grid-column: 1 / -1;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.range-slider-container input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #595959;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.range-slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+.range-slider-container .range-display {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #fefefe;
+}
+
+
+/* Action Buttons */
+.action-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    grid-column: span 1;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.generate-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.generate-btn:hover {
+    background-color: #0056b3;
+}
+
+.download-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+}
+
+/* Generation Results Section */
+.generation-results {
+    background-color: #191819;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    text-align: left;
+}
+
+.generation-results h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #fefefe;
+    text-align: center;
+}
+
+.password-list {
+    background-color: #252525;
+    border: 1px solid #595959;
+    border-radius: 5px;
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    color: #fefefe;
+    font-family: 'Courier New', Courier, monospace;
+    word-wrap: break-word; /* Ensure long words break */
+    white-space: pre-wrap; /* Preserve whitespace and wrap */
+}
+
+.password-list p {
+    margin: 5px 0;
+    word-break: break-all;
+    padding: 5px 0;
+}
+
+.password-list p:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+.no-passwords-msg {
+    text-align: center;
+    color: #a6a6a6;
+    padding: 20px;
+}
+
+
+/* Auth Pages (Login/Sign Up) Specific Styles */
+.auth-content {
+    background-color: #202120;
+    min-height: calc(100vh - 100px);
+    padding: 100px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fefefe;
+}
+
+.auth-box {
+    background-color: #191819;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.auth-box h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #fefefe;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    text-align: left;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.05em;
+    color: #fefefe;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #595959;
+    background-color: #252525;
+    color: #fefefe;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.error-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-weight: bold;
+    display: none; /* Hidden by default, shown with JavaScript */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.95em;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.auth-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.auth-btn:hover {
+    background-color: #0056b3;
+}
+
+.auth-links {
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #a6a6a6;
+}
+
+.auth-links p {
+    margin: 5px 0;
+}
+
+.auth-links a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #0056b3;
+}
+
+/* Checkbox specific for Sign Up - UPDATED STYLES */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid #595959;
+    border-radius: 4px;
+    background-color: #252525;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.checkbox-group input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus ring */
+}
+
+.checkbox-group input[type="checkbox"]:hover {
+    border-color: #007bff; /* Highlight border on hover */
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-size: 0.95em;
+    cursor: pointer;
+    color: #fefefe; /* Ensure label color is consistent */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tools-content h2, .generate-content h2, .auth-box h2 {
+        font-size: 2em;
+    }
+    .tool-box {
+        max-width: 90%; /* Allow tool boxes to take more width on small screens */
+    }
+    .generation-form {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        padding: 25px;
+    }
+    .action-btn {
+        grid-column: 1; /* Buttons span full width */
+    }
+    .auth-box {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-box {
+        padding: 30px;
+    }
+    .welcome-box h1 {
+        font-size: 2.2em;
+    }
+    .welcome-box p {
+        font-size: 1em;
+    }
+    .tools-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
