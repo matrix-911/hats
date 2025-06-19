@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Hats - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/darkhats-logo.png" alt="Dark Hats Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="generate.html">Generat</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                </div>
+        </div>
+    </header>
+
+    <main class="auth-content">
+        <div class="auth-box">
+            <h2>Sign Up</h2>
+            <form id="signup-form" class="auth-form">
+                <div class="form-group">
+                    <label for="signup-email">Email *</label>
+                    <input type="email" id="signup-email" placeholder="Enter your Email" required>
+                    <span class="error-icon" data-field="signup-email">✖</span>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password *</label>
+                    <input type="password" id="signup-password" placeholder="Enter password" required>
+                    <span class="error-icon" data-field="signup-password">✖</span>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm password" required>
+                    <span class="error-icon" data-field="confirm-password">✖</span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agree-terms" required>
+                    <label for="agree-terms">I agree to the <a href="terms.html" target="_blank">terms and conditions</a></label>
+                </div>
+
+                <p id="signup-error-msg" class="error-message" style="display: none;">
+                    </p>
+
+                <button type="submit" class="auth-btn">Sign Up</button>
+
+                <div class="auth-links">
+                    <p>Already have an account? <a href="login.html">Log in here</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Dark Hats. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

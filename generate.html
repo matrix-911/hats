@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Hats - Generate Passwords</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/darkhats-logo.png" alt="Dark Hats Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="generate.html">Generat</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                </div>
+        </div>
+    </header>
+
+    <main class="generate-content">
+        <div class="container">
+            <h2>Generate Passwords</h2>
+
+            <div class="generation-form">
+                <div class="input-group">
+                    <label for="strings-input">Strings / Keywords ?</label> 
+                    <input type="text" id="strings-input" placeholder='e.g., "mohammad", "johnny", "liverpool", "guitar"'> 
+                    <button class="add-input-btn">+</button>
+                </div>
+
+                <div class="input-group">
+                    <label for="dates-input">Dates (D/M/YYYY) ?</label> 
+                    <input type="text" id="dates-input" placeholder='e.g., "19/7/2003", "23/1/2009"'> 
+                    <button class="add-input-btn">+</button>
+                </div>
+
+                <div class="input-group">
+                    <label for="numbers-input">Numbers ?</label> 
+                    <input type="text" id="numbers-input" placeholder='e.g., "1212", "007", "2323", "1995"'> 
+                    <button class="add-input-btn">+</button>
+                </div>
+
+                <div class="option-group">
+                    <label class="switch">
+                        <input type="checkbox" id="include-uppercase">
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="include-uppercase">Must Include Uppercase</label> 
+                </div>
+
+                <div class="option-group">
+                    <label class="switch">
+                        <input type="checkbox" id="include-symbols">
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="include-symbols">Must Include Symbols</label> 
+                </div>
+
+                <div class="option-group">
+                    <label for="password-count">Number of Passwords</label> 
+                    <input type="number" id="password-count" value="10000" min="1" max="1000000"> 
+                </div>
+
+                <div class="option-group range-slider-container">
+                    <label for="password-length-range">Customizable length</label> 
+                    <input type="range" id="password-length-range-min" min="6" max="30" value="8">
+                    <input type="range" id="password-length-range-max" min="6" max="30" value="16">
+                    <div class="range-display">
+                        Length: <span id="min-length-display">8</span> - <span id="max-length-display">16</span>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="action-btn generate-btn">Generate</button>
+                <button id="download-btn" class="action-btn download-btn" style="display: none;">Download</button>
+            </div>
+
+            <div class="generation-results">
+                <h3>Generated Passwords (Preview)</h3>
+                <div id="password-list" class="password-list">
+                    <p class="no-passwords-msg">No passwords generated yet. Enter your criteria and click 'Generate'.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Dark Hats. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
